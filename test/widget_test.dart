@@ -28,6 +28,7 @@ void main() {
       expect(find.text('0'), findsNothing);
       expect(find.text('1'), findsOneWidget);
     });
+
     testWidgets('Counter decrement smoke test', (WidgetTester tester) async {
       // Build our app and trigger a frame.
       await tester.pumpWidget(const MyApp());
@@ -40,7 +41,7 @@ void main() {
       await tester.tap(find.byIcon(Icons.remove));
       await tester.pump();
 
-      // Verify that our counter has incremented.
+      // Verify that our counter has decremented.
       expect(find.text('0'), findsNothing);
       expect(find.text('-1'), findsOneWidget);
     });
